@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* font styling */
+h1, h2, h3, h4,p {
+		font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-weight:bold;
+}
+
+/* form styling */
+input, label {
+ font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+	font-weight:bold;
+		}
+
+/* set background color */
+body {
+  background-color:#114aa6;
+}
+
+
+input[type=button], input[type=submit], input[type=reset]
+{
+  background-color: #1195A6; /* Green */
+  border: none;
+	border-radius: 10px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+}
+
+/* button styling */
+button {
+  background-color: #1195A6; /* Green */
+  border: none;
+	border-radius: 10px;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+}
+
+/* header styling */
+.topnav {
+	width:100%;
+  	overflow: hidden;
+	background-color: #1195A6;
+	border-style: solid;
+	border-color: black;
+	padding: 0%;
+	text-align: center;
+	color:#114aa6;
+		  }
+
+/* right side container */
+.container-right {
+float:right;
+padding:.5% 0% 0% 3%;
+width: 46.5%;
+	height: 550px;
+display: block;
+	background-color:#114aa6;
+	border-left-style: solid;
+	border-left-color:black;
+	border-bottom-style: solid;
+	border-bottom-color:black;
+	color: #1195A6;
+	
+}
+
+/* left side container */
+.container-left {
+float:left;
+padding:.5% 0% 0% 3%;
+width: 47%;
+	height: 550px;
+	background-color:#114aa6;
+	color: white;
+	border-bottom-style: solid;
+	border-bottom-color:black;
+	
+	
+	}
+
+/* footer styling */
+.footer {
+	width:100%;
+	  	overflow: hidden;
+	background-color: #1195A6;
+	text-align: center;
+	padding: 0%;
+	border-style: solid;
+	border-color:black;
+	
+	color:#114aa6;
+	font-size:22px;
+	
+		  }

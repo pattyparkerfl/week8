@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+   <!--link for style sheet-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+   
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+	<title>Adopt an Element Assignment Sign-up</title>
+
+	
+	<script type="text/javascript">
+		/* Set up an array of elements*/
+        var element_symbol = ["Rg", "Nd", "Ho", "Bh", "Sg"];
+		var element;
+		
+		var student;
+		
+		/*function to check if another student has already chosen element*/
+		function IsElementChosen () {
+     		var student = document.getElementById("student_name").value;
+    		var newElement = document.getElementById("student_element").value;
+			
+			var foundIt = false;
+    			/*if element is already on list student is asked to chose another*/
+				for (i = 0; i < element_symbol.length; i = i + 1)  {
+        			if (newElement == element_symbol[i])  {
+            			foundIt = true;
+            			document.getElementById("output").innerHTML = "Sorry " + student +", " + newElement + " has already been chosen. Please pick another";
+				    }
+        		}
+        			/*if element is not on list student it will be added*/
+        			if ( foundIt == false) {
+            			document.getElementById("output").innerHTML = "Great! We did not find " + newElement + " so " +student+ " and " +newElement + " are being added to the list.";
+            			element_symbol.push(newElement)
+            		}
+    	}
+	</script>
+</head>
+
+<body>
+  	<!--this is the top banner...logo and navigation-->
+	<div class="topnav">
+		<img src = "images/logo1.jpg" width="5%" align ="left">
+		<h1> Adopt an Element Assignment Sign-up</h1>
+	</div>
+   
+	<!--picture of periodic table to chose element from-->
+	 <div class="container-left">
+ 		<img src = "images/ptable.JPG" width="86%" align="center" >
+ 	</div>
+	 
+	<!--directions for project-->
+	 <div class="container-right">
+		<h2>Adopt an Element Project Directions</h2>      
+      	<p> Requirements:<br>
+			1) Complete an Adopt An Element information sheet. (60% of grade) You may use a variety of reference sources. Possible ideas are encyclopedias,books, science encyclopedias, science catalogs, magazines, and/or Internet sites*.Information sheets must be neat, written in black ink, and contain all the information requested. You also need to provide a list of your sources on the back of your information sheet. A minimum of three sources are required. <br><br>
+			2) Create an advertisement for your element. (40% of grade) The advertisement must include the element’s name, symbol, atomic number, atomic mass, cost, and an advertising slogan that describes one or more of its important uses. Advertisements must be neat, colorful, and contain all the information listed above. You may add pictures that relate to your advertisement theme.<br><br>
+			Enter your name and the symbol of the element you would like to research below</p>
+		 
+		 <!--form to input name and element choice-->
+		 <form id="signupform">
+			First and last name<input type="text" name="name"  id="student_name"/><br />
+			Write the symbol of the element you would to adopt<input type="text" name="element"  id="student_element"/><br><br>
+		</form>
+		 
+		 <!--button to check if element is already chosen-->
+		 <button onclick="IsElementChosen()">Sign up for your element</button><br>
+		
+		 <!--results of button click displayed-->
+		 <p id ="output"> </p><br>
+	</div>
+
+	 <!--this is the footer-->
+	<div class="footer">
+		<a href="https://pattyparkerfl.github.io/week3/">Chemistry Corner</a>
+  	</div>
+</body>
+</html>
