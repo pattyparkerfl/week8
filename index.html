@@ -29,14 +29,20 @@
         			if (newElement == element_symbol[i])  {
             			foundIt = true;
             			document.getElementById("output").innerHTML = "Sorry " + student +", " + newElement + " has already been chosen. Please pick another";
-				    }
+				 showList();   
+				}
         		}
         			/*if element is not on list student it will be added*/
         			if ( foundIt == false) {
             			document.getElementById("output").innerHTML = "Great! We did not find " + newElement + " so " +student+ " and " +newElement + " are being added to the list.";
             			element_symbol.push(newElement)
+					showList();
             		}
     	}
+		function showList() {
+       		document.getElementById("list").innerHTML = "Here is the current list of elements taken " + element_symbol; 
+        }
+    
 	</script>
 </head>
 
